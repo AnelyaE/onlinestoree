@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная - Коллекция этой весны</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .button {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Интернет магазин женской одежды</h1>
+        <p>THE ANNEX</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="colletion.html">Коллекция</a>
+        <a href="contact.html">Контакты</a>
+        <a href="basket.html">Корзина</a>
+        <a href="about us.html">О нас</a>
+    </nav>
+     <section>
+        <img src="https://i.pinimg.com/originals/a6/96/65/a696654bc0aa63b7a2e51368ced9dfce.jpg" style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" >
+    </section>
+   
+    <head>
+        <style>
+            /* Устанавливаем серый фон для блока с классом top-products */
+            #top-products {
+                background-color: darkgrey /* Светло-серый цвет */
+            }
+        </style>
+    </head>
+    <head>
+        <style>
+            /* Устанавливаем серый фон для блока с классом top-products */
+            #top-products {
+                background-color: #333; /* Светло-серый цвет */
+            }
+        </style>
+    </head>
+    <body>
+        <head>
+            <style>
+                /* Устанавливаем серый фон для секции с классом top-products */
+                #top-products {
+                    background-color: #333; /* Серый фон */
+                    color: #ffffff; /* Белый цвет текста */
+                }
+        
+                /* Опционально, можно настроить стиль для заголовка и текста */
+                #top-products h2, #top-products h3, #top-products p {
+                    color: #ffffff; /* Белый цвет текста для заголовков и параграфов */
+                }
+        
+                .product button {
+                    background-color: #ffffff; /* Белая кнопка */
+                    color: #000000; /* Черный цвет текста на кнопке */
+                }
+        
+            </style>
+        </head>
+        <body>
+            <head>
+                <style>
+                    .btn {
+                        background-color: #4CAF50;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        cursor: pointer;
+                    }
+            
+                    .btn:hover {
+                        background-color: #45a049;
+                    }
+            
+                    /* Стиль для корзины */
+                    .cart {
+                        margin-top: 20px;
+                    }
+                </style>
+                <script>
+                    // Массив для хранения товаров в корзине
+                    let cart = [];
+            
+                    function addToCart(productName, productPrice) {
+                        // Добавляем товар в корзину
+                        cart.push({ name: productName, price: productPrice });
+                        alert(productName + ' был добавлен в корзину');
+                        updateCartDisplay(); // Обновляем отображение корзины
+                    }
+            
+                    function updateCartDisplay() {
+                        let cartContent = 'Товары в корзине:\n';
+                        let total = 0;
+            
+                        // Формируем список товаров в корзине и считаем общую сумму
+                        cart.forEach(item => {
+                            cartContent += item.name + ' - ' + item.price + '\n';
+                            total += item.price;
+                        });
+            
+                        cartContent += 'Общая сумма: ' + total + ' ₽';
+            
+                        // Обновляем информацию о корзине на странице
+                        document.getElementById('cart-display').textContent = cartContent;
+                    }
+                </script>
+            </head>
+            <body>
+                <section id="top-products" class="top-products">
+                    <div class="container">
+                        <h2>Топ продаж</h2>
+                        <div class="products">
+                            <div class="product">
+                                <img src="https://i.pinimg.com/736x/90/7d/f8/907df84477f251501f4609343c8ea3e1.jpg" style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;"alt="Пиджак">
+                                <h3>Пиджак</h3>
+                                <p>50 000</p>
+                                <button class="btn" onclick="addToCart('Пиджак', 50000)">Купить</button>
+                            </div>
+                            <div class="product">
+                                <img src="https://i.pinimg.com/736x/00/af/f8/00aff8ecdc875066a1a701ad0e292738.jpg"style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" alt="Платье">
+                                <h3>Платье</h3>
+                                <p>23 000</p>
+                                <button class="btn" onclick="addToCart('Платье', 23000)">Купить</button>
+                            </div>
+                            <div class="product">
+                                <img src="https://i.pinimg.com/736x/9b/46/b0/9b46b00014b30c407eafa99aeb0e42c6.jpg"style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" alt="Брюки">
+                                <h3>Брюки</h3>
+                                <p>20 000</p>
+                                <button class="btn" onclick="addToCart('Брюки', 20000)">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Галерея моды 2024</h2>
+                <div class="gallery-grid">
+                    <img src="https://womantell.ru/wp-content/uploads/2023/06/moda-osen-zima-2024-3.jpg"style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" alt="Изображение 1">
+                    <img src="https://theblueprint.ru/upload/29078m/vms/6784f8d4fa10ea59ca21052829d0310c.jpg"style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" alt="Изображение 2">
+                    <img src="https://resizer.mail.ru/p/2a38d77d-71e3-5c0e-a4be-d7eb20f9c2ad/AQAF6w3b14D2_O44qeJnlMIkGgJZ63827yurKkznu07AFF9uqglhsKYL5IohfxhJx2BYzVp42AwlLs1zAtlrFD5DEfM.jpg"style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" alt="Изображение 3">
+                    <img src="https://stiletto.blog/sites/default/files/imce/users/1814/11/Saint-Laurent-clp-S24-073-768x1152.jpg.webp"style="width: 100%; max-width: 1500px; height: auto; border-radius: 5px;" alt="Изображение 4">
+                </div>
+            </div>
+        </section>
+
+    <head>
+        <style>
+            /* Устанавливаем белый фон для footer */
+            footer {
+                background-color: #ffffff; /* Белый цвет фона */
+                color: #000000; /* Черный цвет текста для контраста */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Содержимое страницы -->
+    
+        <footer>
+            <p>&copy; With Love</p>
+        </footer>
+    
+    </body>
+    </html>
+    
+        
+   
